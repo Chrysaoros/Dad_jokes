@@ -17,15 +17,5 @@ async function generateJoke() {
   const response = await fetch("https://icanhazdadjoke.com/", config);
   const data = await response.json();
 
-  console.log(response);
-  console.log(data);
   jokeElement.innerHTML = data.joke;
 }
-
-// // using "fetch"
-// fetch("https://icanhazdadjoke.com/", config)
-// .then((response) => response.json())
-// .then((data) => {
-//   console.log(data);
-//   jokeElement.innerText = data.joke;
-// });
